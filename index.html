@@ -4,12 +4,20 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-
-
+    <div class="container"></div>
+    <script id="#calendario" type="text/x-handlebars-template">
+      <div class="entry">
+        <h1>{{title}}</h1>
+        <ul class='list'>
+          {{day}}
+        </ul>
+      </div>
+    </script>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
