@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
   var date = moment("2018-01-01");
-  var monthYears = moment("2018-01-01").format('');
+  var monthYears = moment("2018-01-01").format('MMMM YYYY');
 
   var days = date.daysInMonth();
   console.log(days);
@@ -20,8 +20,8 @@ $(document).ready(function () {
 
     );
 
-    // var source = $("#calendario").html();
-    // var template = Handlebars.compile(source);
+    var source = $("#calendario").html();
+    var template = Handlebars.compile(source);
 
     for (var i = 1; i <= days; i++) {
       console.log(i);
@@ -29,7 +29,7 @@ $(document).ready(function () {
       var day = '<li>' +  i + ' ' + month + '</li>';
       console.log(day);
 
-      var context = { title: "My New Post", day: "day" };
+      var context = { title: monthYears, day: day };
       var html = template(context);
       $('.container').append(html);
     }
