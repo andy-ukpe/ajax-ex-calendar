@@ -1,10 +1,12 @@
 $(document).ready(function () {
 
   var date = moment("2018-01-01");
-  var monthYears = moment("2018-01-01").format('MMMM YYYY');
+
 
   var days = date.daysInMonth();
-  console.log(days);
+
+
+  $('.month').html(date.format('MMMM YYYY'));
 
   $.ajax(
     {
@@ -24,15 +26,14 @@ $(document).ready(function () {
     var template = Handlebars.compile(source);
 
     for (var i = 1; i <= days; i++) {
-      console.log(i);
       var month = moment("2018-01-01").format('MMMM');
-      var day = '<li>' +  i + ' ' + month + '</li>';
-      console.log(day);
+      var day = i + ' ' + month;
 
-      var context = { title: monthYears, day: day };
+      var context = { day: day};
       var html = template(context);
       $('.container').append(html);
     }
+
 
 
 

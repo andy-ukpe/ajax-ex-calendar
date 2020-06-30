@@ -9,12 +9,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <h1 class="month"></h1>
+    </div>
     <script id="calendario" type="text/x-handlebars-template">
       <div class="entry">
-        <h1>{{title}}</h1>
         <ul class='list'>
-          {{day}}
+          <li>
+            {{day}}{{date}}
+          </li>
         </ul>
       </div>
     </script>
