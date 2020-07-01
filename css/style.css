@@ -1,0 +1,15 @@
+
+.red{
+  color: red;
+}
+.button{
+  padding-top: 20px;
+  cursor: pointer;
+}
+.prev, .next, .month{
+  display: inline-block;
+  margin: 10px;
+}
+.prev, .next{
+  cursor: pointer;
+}

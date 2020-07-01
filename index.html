@@ -10,16 +10,19 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="month"></h1>
+      <div class="prev"> << previous </div>
+      <h1 class="month" data-current-month=""></h1>
+      <div class="next"> next >> </div>
     </div>
+    <ul class="days">
+
+    </ul>
     <script id="calendario" type="text/x-handlebars-template">
-      <div class="entry">
-        <ul class='list'>
+
           <li class='giorno' data-complete-date="{{completeDate}}">
-            {{day}}{{date}}
+            {{day}}
           </li>
-        </ul>
-      </div>
+
     </script>
     <script type="text/javascript" src="script.js"></script>
   </body>
