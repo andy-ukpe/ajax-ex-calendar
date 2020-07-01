@@ -65,7 +65,7 @@ function printDays(startDate) {
     var currentDate = moment(startDate).add(i, 'days')
     console.log(currentDate);
 
-    var context = { day: currentDate.format('DD MMMM'), completeDate: currentDate.format('YYYY-MM-DD') };
+    var context = { day: currentDate.format('DD'), week: currentDate.format('ddd'), completeDate: currentDate.format('YYYY-MM-DD') };
     var html = template(context);
     $('.days').append(html);
   }
@@ -94,7 +94,7 @@ function printHolidays(startDate) {
 
             if (thisDateHoli === currentlyHoliday.date) {
               thisDay.addClass('red');
-              thisDay.append(' - ' + currentlyHoliday.name);
+              thisDay.children('.holiday').html(currentlyHoliday.name);
             }
 
           })

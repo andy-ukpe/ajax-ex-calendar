@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="css/style.css">
@@ -9,19 +10,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="prev"> << previous </div>
-      <h1 class="month" data-current-month=""></h1>
-      <div class="next"> next >> </div>
+    <div class="container-flex">
+      <div class="container">
+        <div class="prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="next"><i class="fas fa-chevron-right"></i></div>
+        <h1 class="month" data-current-month=""></h1>
+
+      </div>
     </div>
-    <ul class="days">
+    <div class="quads">
+      <div class="calendar days">
+        <!-- <div class="box">
+          <p class="number">5 <span class="week">mon</span></p>
+          <p class="holiday">mon</p>
+        </div> -->
+      </div>
+    </div>
+    <!-- <ul class="days">
 
-    </ul>
+    </ul> -->
     <script id="calendario" type="text/x-handlebars-template">
-
-          <li class='giorno' data-complete-date="{{completeDate}}">
+      <div class="box giorno" data-complete-date="{{completeDate}}">
+        <p class="number">{{day}}<span class="week">{{week}}</span></p>
+        <p class="holiday"></p>
+      </div>
+          <!-- <li class='giorno' data-complete-date="{{completeDate}}">
             {{day}}
-          </li>
+          </li> -->
 
     </script>
     <script type="text/javascript" src="script.js"></script>
